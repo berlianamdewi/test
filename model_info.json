@@ -1,0 +1,45 @@
+{
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 100,
+  "max_depth": 5,
+  "features": [
+    "Distance_km",
+    "Time_min",
+    "RR",
+    "RH",
+    "RiskWeight"
+  ],
+  "class_names": [
+    "Fastest",
+    "Safest",
+    "Balanced"
+  ],
+  "class_labels": [
+    0,
+    1,
+    2
+  ],
+  "accuracy": 0.9732,
+  "kappa": 0.9133,
+  "threshold": {
+    "MEAN_RH": 83.53,
+    "MEAN_RR": 15.16,
+    "MAX_RR": 135.0
+  },
+  "normalization": {
+    "Tmin": 0.0,
+    "Tmax": 231.1,
+    "Rmin": 1.0,
+    "Rmax": 5.0
+  },
+  "predict_example": {
+    "input": {
+      "Distance_km": 50.0,
+      "Time_min": 75.0,
+      "RR": 25.0,
+      "RH": 85.0,
+      "RiskWeight": 1.5
+    },
+    "output": "Balanced"
+  }
+}
